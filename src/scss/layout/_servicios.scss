@@ -1,0 +1,40 @@
+@use "sass:math";
+
+.listado-servicios {
+
+    @include tablet{
+        @include grid(2,2rem);
+    }
+
+    .servicio {
+        margin-bottom: 2rem;
+        background-color:  $blanco;
+        border-radius: 1rem;
+        padding: math.div($separacion, 2);
+
+      
+        p{
+            margin: 0 0 math.div($separacion,4) 0;
+        }
+
+        .nombre-servicio {
+            color: $negro;
+        }
+
+        .precio-servicio{
+            color: $azul;
+            font-size: 3rem;
+            font-weight: $bold;
+            margin: 0;
+        }
+       &.seleccionado{
+           background-color: $azul;
+
+           p{
+               color: $blanco;
+           }
+       }
+    }
+    
+}
+
